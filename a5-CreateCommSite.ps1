@@ -12,12 +12,12 @@ param
 	[Parameter (Mandatory=$false)]
 	[int] $quotaInGB = 1,
 	[Parameter (Mandatory=$false)]
-	[string] $owner = "admin@M365x251516.onmicrosoft.com"
+	[string] $owner = "admin@<yourtenant>.onmicrosoft.com"
 )
 
 Write-Output "$(Get-Date) Starting CreateCommSite..."
 $tenant = Get-AutomationVariable -Name "tenantname"
-$cred = Get-AutomationPSCredential -Name 'NestorW'
+$cred = Get-AutomationPSCredential -Name '<yourcredential>'
 
 Connect-SPOService "https://$tenant-admin.sharepoint.com" -Credential $cred
 

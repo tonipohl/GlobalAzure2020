@@ -1,9 +1,9 @@
 # https://docs.microsoft.com/en-us/azure/automation/automation-webhooks#sample-runbook
 Write-Output "$(Get-Date) starting webhook"
 
-$uri = "https://s2events.azure-automation.net/webhooks?token=BrBLEt8PAKjLYyc01WEjCZAV%2fyL%2bgBt8etk73IP0dB0%3d"
+$uri = "https://s2events.azure-automation.net/webhooks?token=<yourtoken>"
 
-$site  = @{ title="GlobalAzure27"; quotaInGB=2; owner = "admin@M365x251516.onmicrosoft.com" }
+$site  = @{ title="GlobalAzure1"; quotaInGB=2; owner = "admin@<yourtenant>.onmicrosoft.com" }
 
 $body = ConvertTo-Json -InputObject $site
 #$header = @{ message="StartedbyContoso"}
